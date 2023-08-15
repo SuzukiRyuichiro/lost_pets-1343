@@ -26,7 +26,7 @@ class PetsController < ApplicationController
       redirect_to pets_path, status: :see_other
     else
       # let the user to stay in the form
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

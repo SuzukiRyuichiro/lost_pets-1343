@@ -10,4 +10,4 @@
   <%= form.date_field :found_on, class: 'form-control' %>
   <%= form.submit "Submit", class: 'btn btn-primary mt-2' %>
 <% end %>
-<%= @pet %>
+<%= @pet.errors.full_messages.join(', ') if @pet.errors.any?%>

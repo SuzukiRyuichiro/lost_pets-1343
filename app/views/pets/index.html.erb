@@ -1,4 +1,4 @@
-<h1>Index</h1>
+<h1>Pets</h1>
 <div class="row gap-2">
   <% @pets.each do |pet| %>
     <div class="card col-3">
@@ -12,3 +12,4 @@
     </div>
   <% end %>
 </div>
+<%= link_to "Add", new_pet_path, class: 'btn btn-success mt-4' %>
