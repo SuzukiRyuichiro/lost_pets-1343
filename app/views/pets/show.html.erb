@@ -1,0 +1,13 @@
+<h1>Im in show!</h1>
+<div class="row">
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title"><%= @pet.name %></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= @pet.species %></h6>
+      <p class="card-text"><%= @pet.address %></p>
+      <p class="card-text">Found <%= (Date.today - @pet.found_on).to_i %> days ago</p>
+      <%= link_to "Go back to list", pets_path, class: 'card-link' %>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>
