@@ -1,0 +1,12 @@
+<h1>New!!!</h1>
+<%= form_with model: @pet do |form| %>
+  <%= form.label :name, class: 'form-label' %>
+  <%= form.text_field :name, class: 'form-control' %>
+  <%= form.label :address, class: 'form-label' %>
+  <%= form.text_field :address, class: 'form-control' %>
+  <%= form.label :species, class: 'form-label' %>
+  <%= form.text_field :species, class: 'form-control' %>
+  <%= form.label :found_on, class: 'form-label' %>
+  <%= form.date_field :found_on, class: 'form-control' %>
+  <%= form.submit "Submit", class: 'btn btn-primary mt-2' %>
+<% end %>
