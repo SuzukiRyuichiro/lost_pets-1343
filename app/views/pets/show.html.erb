@@ -7,7 +7,7 @@
       <p class="card-text"><%= @pet.address %></p>
       <p class="card-text">Found <%= (Date.today - @pet.found_on).to_i %> days ago</p>
       <%= link_to "Go back to list", pets_path, class: 'card-link' %>
-      <a href="#" class="card-link">Another link</a>
+      <%= link_to "Edit", edit_pet_path(@pet), class: 'card-link' %>
     </div>
   </div>
 </div>
