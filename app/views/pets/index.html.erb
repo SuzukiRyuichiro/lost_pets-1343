@@ -7,7 +7,7 @@
         <h6 class="card-subtitle mb-2 text-body-secondary"><%= pet.species %></h6>
         <p class="card-text"><%= pet.address %></p>
         <%= link_to 'Details', pet_path(pet), class: 'card-link btn btn-primary' %>
-        <a href="#" class="card-link">Another link</a>
+        <%= link_to 'Delete', pet_path(pet), data: {turbo_method: 'delete', turbo_confirmation: 'Are you sure?'}, class: 'btn btn-danger' %>
       </div>
     </div>
   <% end %>

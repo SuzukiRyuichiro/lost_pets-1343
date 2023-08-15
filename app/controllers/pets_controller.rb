@@ -45,6 +45,16 @@ class PetsController < ApplicationController
     redirect_to pet_path(@pet)
   end
 
+  def destroy
+    # find the pet instance with id
+    @pet = Pet.find(params[:id])
+    # destroy
+    @pet.destroy
+
+    # send the user to index
+    redirect_to pets_path
+  end
+
   private
 
   def pet_params
